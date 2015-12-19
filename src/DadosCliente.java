@@ -14,73 +14,73 @@ public class DadosCliente {
 	public DadosCliente(String nome, String cPF, int telefone, String endereco,
 			Date dataNasc, String email, BDConecta bD) {
 		super();
-		Nome = nome;
-		CPF = cPF;
-		Telefone = telefone;
-		Endereco = endereco;
+		this.Nome = nome;
+		this.CPF = cPF;
+		this.Telefone = telefone;
+		this.Endereco = endereco;
 		this.dataNasc = dataNasc;
-		Email = email;
-		BD = bD;
+		this.Email = email;
+		this.BD = bD;
 	}
 
 	public DadosCliente(int iD) {
 		super();
 		DadosCliente dados = BD.RecuperaCliente(iD);
-		ID=dados.ID;
-		Nome = dados.Nome;
-		CPF = dados.CPF;
-		Telefone = dados.Telefone;
-		Endereco=dados.Endereco;
-		dataNasc=dados.dataNasc;
-		Email=dados.Email;				
+		this.ID = dados.ID;
+		this.Nome = dados.Nome;
+		this.CPF = dados.CPF;
+		this.Telefone = dados.Telefone;
+		this.Endereco = dados.Endereco;
+		this.dataNasc = dados.dataNasc;
+		this.Email = dados.Email;				
 	}
 	
 	public int getID() {
-		return ID;
+		return this.ID;
 	}
 	public void setID(int iD) {
-		ID = iD;		
+		this.ID = iD;
 	}
 	public String getNome() {
-		return Nome;
+		return this.Nome;
 	}
 	public void setNome(String nome) {
-		Nome = nome;
+		this.Nome = nome;
 		BD.AtualizaCliente(this);
 	}
 	public String getCPF() {
-		return CPF;
+		return this.CPF;
 	}
 	public void setCPF(String cPF) {
-		CPF = cPF;
+		this.CPF = cPF;
 		BD.AtualizaCliente(this);
 	}
 	public int getTelefone() {
-		return Telefone;
+		return this.Telefone;
 	}
 	public void setTelefone(int telefone) {
-		Telefone = telefone;
+		this.Telefone = telefone;
 		BD.AtualizaCliente(this);
 	}
 	public String getEndereco() {
-		return Endereco;
+		return this.Endereco;
 	}
 	public void setEndereco(String endereco) {
-		Endereco = endereco;
+		this.Endereco = endereco;
 		BD.AtualizaCliente(this);
 	}
 	public Date getDataNasc() {
-		return dataNasc;
+		return this.dataNasc;
 	}
 	public void setDataNasc(Date dataNasc) {
 		this.dataNasc = dataNasc;
 		BD.AtualizaCliente(this);
 	}
 	public String getEmail() {
-		return Email;
+		return this.Email;
 	}
 	public void setEmail(String email) {
-		Email = email;
+		this.Email = email;
 		BD.AtualizaCliente(this);
 	}
 }
